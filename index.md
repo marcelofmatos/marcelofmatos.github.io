@@ -1,4 +1,4 @@
-## Marcelo Matos
+## Formação
 
 * Tecnólogo em Análise e Desenvolvimento de Sistemas pelo IFRR
 * Técnico em Informática pelo IFRR
