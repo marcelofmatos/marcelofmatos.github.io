@@ -10,11 +10,10 @@
 ## Onde estive
 
 * [Complemento](https://complemento.net.br/)
-* [Universidade Federal de Roraima](http://ufrr.br)
-* [Ponto de Presença da RNP em Roraima](http://www.pop-rr.rnp.br)
+* [Universidade Federal de Roraima](http://ufrr.br) como Técnico em Tecnologia da Informação
+* [Ponto de Presença da RNP em Roraima](http://www.pop-rr.rnp.br) como Coordenador Técnico
 
-## Eu por aí na internet
+## Redes sociais
 
-* [https://github.com/marcelofmatos](https://github.com/marcelofmatos)
 * [https://twitter.com/marcelofmatos](https://twitter.com/marcelofmatos)
 * [https://www.linkedin.com/in/marcelomatosdev/](https://www.linkedin.com/in/marcelomatosdev/)
