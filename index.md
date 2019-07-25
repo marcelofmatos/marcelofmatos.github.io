@@ -10,8 +10,8 @@
 ## Onde estive
 
 * Trabalhando na [Complemento](https://complemento.net.br/)
-* 2009-1018 [Universidade Federal de Roraima](http://ufrr.br)
-
+* 2009-2018 [Universidade Federal de Roraima](http://ufrr.br)
+* 2006-2018 [Ponto de Presença da RNP em Roraima](http://www.pop-rr.rnp.br)
 
 ## Eu por aí na internet
 
