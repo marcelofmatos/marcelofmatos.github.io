@@ -5,7 +5,7 @@ do [IFRR](http://www.ifrr.edu.br/), além de projetos de infraestrutura usando s
 
 ## Formação
 
-* [Tecnólogo em Análise e Desenvolvimento de Sistemas](http://www.ifrr.edu.br/campi/boa-vista/cursos/graduacao/tecnologia-em-gestao-hospitalar/midia/imagens/infraestrutura/tads/view) pelo [IFRR](http://www.ifrr.edu.br/)
+* [Tecnólogo em Análise e Desenvolvimento de Sistemas](http://www.ifrr.edu.br/campi/boa-vista/cursos/graduacao/tecnologo-em-analise-e-desenvolvimento-de-sistemas) pelo [IFRR](http://www.ifrr.edu.br/)
 * Técnico em Informática pelo [IFRR](http://www.ifrr.edu.br/)
 
 
