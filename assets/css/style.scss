@@ -3,6 +3,9 @@
 
 @import "{{ site.theme }}";
 
+.wrapper {
+    margin-top: 1%;
+}
 
 .wrapper header {
     display: none;
