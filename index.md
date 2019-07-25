@@ -12,6 +12,6 @@
 
 ### Eu por aí na internet
 
-* https://github.com/marcelofmatos
-* https://twitter.com/marcelofmatos
-* https://www.linkedin.com/in/marcelomatosdev/
+* [https://github.com/marcelofmatos](https://github.com/marcelofmatos)
+* [https://twitter.com/marcelofmatos](https://twitter.com/marcelofmatos)
+* [https://www.linkedin.com/in/marcelomatosdev/](https://www.linkedin.com/in/marcelomatosdev/)
