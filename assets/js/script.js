@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initProgressBars();
     initCodeRain();
+    initWhatsAppLinks(); // Adicionar inicialização dos links do WhatsApp
     
     // Initialize AOS (Animate On Scroll)
     if (typeof AOS !== 'undefined') {
@@ -695,6 +696,30 @@ function initHoverEffects() {
 
 // Initialize hover effects
 initHoverEffects();
+
+// Inicializar links do WhatsApp com URL dinâmica
+function initWhatsAppLinks() {
+    const whatsappLinks = document.querySelectorAll('.whatsapp-link');
+    const siteName = window.location.hostname;
+    
+    whatsappLinks.forEach(link => {
+        const phone = link.getAttribute('data-phone');
+        
+        // Construir mensagem dinâmica
+        const message = `E aí, Marcelo! 👋 Vim do seu site ${siteName} 🚀 Bora trocar uma idéia sobre tech? 😄`;
+        
+        // Codificar a mensagem para URL
+        const encodedMessage = encodeURIComponent(message);
+        
+        // Construir URL completa do WhatsApp
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodedMessage}`;
+        
+        // Aplicar URL ao link
+        link.href = whatsappUrl;
+        link.target = '_blank';
+        link.rel = 'noopener';
+    });
+}
 
 console.log('🚀 Site do Marcelo Matos carregado com sucesso!');
 console.log('💻 Desenvolvido com amor e tecnologia');
