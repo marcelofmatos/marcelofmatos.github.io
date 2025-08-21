@@ -699,26 +699,51 @@ initHoverEffects();
 
 // Inicializar links do WhatsApp com URL dinâmica
 function initWhatsAppLinks() {
-    const whatsappLinks = document.querySelectorAll('.whatsapp-link');
-    const siteName = window.location.hostname;
-    
-    whatsappLinks.forEach(link => {
-        const phone = link.getAttribute('data-phone');
+    // Adicionar pequeno delay para garantir que os elementos estejam carregados
+    setTimeout(() => {
+        const whatsappLinks = document.querySelectorAll('.whatsapp-link');
+        const siteName = window.location.hostname;
         
-        // Construir mensagem dinâmica
-        const message = `E aí, Marcelo! 👋 Vim do seu site ${siteName} 🚀 Bora trocar uma idéia sobre tech? 😄`;
+        console.log(`🔍 Procurando links WhatsApp... Encontrados: ${whatsappLinks.length}`);
         
-        // Codificar a mensagem para URL
-        const encodedMessage = encodeURIComponent(message);
+        whatsappLinks.forEach((link, index) => {
+            const phone = link.getAttribute('data-phone');
+            
+            console.log(`🔗 Configurando link ${index + 1}: telefone ${phone}`);
+            
+            // Adicionar event listener para o click
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevenir comportamento padrão
+                
+                console.log('📱 Click no WhatsApp detectado!');
+                
+                // Construir mensagem dinâmica
+                const message = `E aí, Marcelo! 👋 Vim do seu site ${siteName} 🚀 Bora trocar uma idéia sobre tech? 😄`;
+                
+                // Codificar a mensagem para URL
+                const encodedMessage = encodeURIComponent(message);
+                
+                // Construir URL completa do WhatsApp
+                const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodedMessage}`;
+                
+                console.log(`🔗 Abrindo: ${whatsappUrl}`);
+                
+                // Abrir WhatsApp em nova aba
+                window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+            });
+            
+            // Também definir o href como fallback
+            const message = `E aí, Marcelo! 👋 Vim do seu site ${siteName} 🚀 Bora trocar uma idéia sobre tech? 😄`;
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodedMessage}`;
+            link.href = whatsappUrl;
+            link.target = '_blank';
+            link.rel = 'noopener';
+        });
         
-        // Construir URL completa do WhatsApp
-        const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodedMessage}`;
-        
-        // Aplicar URL ao link
-        link.href = whatsappUrl;
-        link.target = '_blank';
-        link.rel = 'noopener';
-    });
+        console.log(`✅ WhatsApp links inicializados para ${whatsappLinks.length} elementos`);
+        console.log(`🌐 Site detectado: ${siteName}`);
+    }, 100);
 }
 
 console.log('🚀 Site do Marcelo Matos carregado com sucesso!');
