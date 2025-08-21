@@ -1,0 +1,48 @@
+User-agent: *
+Allow: /
+
+# Disallow specific paths
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Allow important files
+Allow: /assets/images/
+Allow: /assets/icons/
+Allow: /manifest.json
+Allow: /sw.js
+
+# Sitemap location
+Sitemap: https://marcelomatos.dev/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Google-specific directives
+User-agent: Googlebot
+Allow: /
+
+# Bing-specific directives
+User-agent: Bingbot
+Allow: /
+
+# Social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Block common bots that might overload the server
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /

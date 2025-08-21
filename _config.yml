@@ -1,12 +1,59 @@
+# Configurações do GitHub Pages
 # Desabilitando Jekyll para usar HTML puro
-# theme: jekyll-theme-time-machine
 
 # Configurações básicas do site
-title: "Marcelo Matos - Desenvolvedor & Analista de Sistemas"
-description: "Desenvolvedor PHP e Analista de Sistemas especializado em softwares livres e infraestrutura"
+title: "Marcelo Matos - Desenvolvedor Full Stack & DevOps"
+description: "Desenvolvedor Full Stack, DevOps e especialista em infraestrutura. Mais de 15 anos criando soluções tecnológicas inovadoras com softwares livres."
+author: "Marcelo Matos"
+email: "marcelofmatos@gmail.com"
 url: "https://marcelofmatos.github.io"
 baseurl: ""
 
-# Desabilita processamento Jekyll
+# Informações do desenvolvedor
+developer:
+  name: "Marcelo Matos"
+  role: "Desenvolvedor Full Stack & DevOps"
+  location: "Boa Vista, Roraima, Brasil"
+  phone: "(11) 977974431"
+  github: "marcelofmatos"
+  linktree: "marcelofmatos"
+
+# Tecnologias principais
+technologies:
+  frontend: ["JavaScript", "HTML5", "CSS3"]
+  backend: ["PHP", "Java", "Python", "Perl"]
+  database: ["MySQL", "PostgreSQL"]
+  devops: ["Docker", "DevOps", "Cloud"]
+
+# SEO e Meta
+keywords: "desenvolvedor, full stack, devops, php, java, python, mysql, postgresql, docker, roraima, boa vista, infraestrutura, saas"
+lang: "pt-BR"
+
+# Social Media
+social:
+  github: "https://github.com/marcelofmatos"
+  linkedin: "https://www.linkedin.com/in/marcelomatosdev/"
+  twitter: "https://twitter.com/marcelofmatos"
+  linktree: "https://linktr.ee/marcelofmatos"
+  whatsapp: "https://api.whatsapp.com/send?phone=5511977974431"
+
+# GitHub Pages
 github:
   is_project_page: false
+  repository_name: "marcelofmatos.github.io"
+  repository_url: "https://github.com/marcelofmatos/marcelofmatos.github.io"
+
+# Plugins (não usado mas mantido para compatibilidade)
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclusões
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
+  - .git/
+  - node_modules/
+  - package.json
+  - package-lock.json

@@ -1,0 +1,117 @@
+{
+    "name": "marcelo-matos-portfolio",
+    "version": "2.0.0",
+    "description": "Portfolio profissional de Marcelo Matos - Desenvolvedor Full Stack & DevOps",
+    "main": "index.html",
+    "scripts": {
+        "start": "python -m http.server 8000",
+        "serve": "npx serve .",
+        "dev": "npx live-server --port=3000 --host=localhost",
+        "build": "echo 'Site estático - sem build necessário'",
+        "deploy": "git add . && git commit -m 'Deploy update' && git push origin main",
+        "lighthouse": "npx lighthouse http://localhost:8000 --view",
+        "test": "echo 'Executar testes de acessibilidade e performance'",
+        "validate": "npx html-validate index.html",
+        "optimize-images": "echo 'Otimizar imagens para web'",
+        "check-links": "npx broken-link-checker http://localhost:8000",
+        "analyze": "npx bundle-analyzer",
+        "pwa-test": "npx pwa-asset-generator"
+    },
+    "keywords": [
+        "portfolio",
+        "developer",
+        "full-stack",
+        "devops",
+        "php",
+        "javascript",
+        "java",
+        "python",
+        "mysql",
+        "postgresql",
+        "docker",
+        "infrastructure",
+        "saas",
+        "roraima",
+        "brazil"
+    ],
+    "author": {
+        "name": "Marcelo Matos",
+        "email": "marcelofmatos@gmail.com",
+        "url": "https://marcelomatos.dev"
+    },
+    "license": "MIT",
+    "homepage": "https://marcelomatos.dev",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/marcelofmatos/marcelofmatos.github.io.git"
+    },
+    "bugs": {
+        "url": "https://github.com/marcelofmatos/marcelofmatos.github.io/issues",
+        "email": "marcelofmatos@gmail.com"
+    },
+    "engines": {
+        "node": ">=14.0.0",
+        "npm": ">=6.0.0"
+    },
+    "devDependencies": {
+        "live-server": "^1.2.2",
+        "lighthouse": "^10.0.0",
+        "html-validate": "^7.0.0",
+        "broken-link-checker": "^0.7.8",
+        "serve": "^14.0.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead",
+        "not ie 11"
+    ],
+    "config": {
+        "port": 8000,
+        "host": "localhost"
+    },
+    "private": false,
+    "funding": {
+        "type": "individual",
+        "url": "https://marcelomatos.dev/#contact"
+    },
+    "contributors": [
+        {
+            "name": "Marcelo Matos",
+            "email": "marcelofmatos@gmail.com",
+            "role": "developer"
+        }
+    ],
+    "technologies": {
+        "frontend": [
+            "HTML5",
+            "CSS3",
+            "JavaScript ES6+",
+            "Progressive Web App"
+        ],
+        "tools": [
+            "Git",
+            "GitHub Pages",
+            "Service Worker",
+            "Web Manifest"
+        ],
+        "performance": [
+            "Lazy Loading",
+            "Code Splitting",
+            "Image Optimization",
+            "Caching Strategy"
+        ]
+    },
+    "features": [
+        "Responsive Design",
+        "Progressive Web App",
+        "Service Worker",
+        "Offline Support",
+        "SEO Optimized",
+        "Performance Optimized",
+        "Accessibility Compliant",
+        "Modern JavaScript",
+        "CSS Animations",
+        "Interactive Elements"
+    ]
+}

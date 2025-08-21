@@ -3,45 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcelo Matos - Desenvolvedor & Analista de Sistemas</title>
+    <title>Marcelo Matos - DevOps</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Marcelo Matos">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Marcelo Matos - DevOps">
+    <meta property="og:description" content="Desenvolvedor, DevOps e especialista em infraestrutura. Mais de 15 anos criando soluções tecnológicas inovadoras com softwares livres.">
+    <meta property="og:image" content="https://marcelomatos.dev/assets/images/og-image.png">
+    <meta property="og:url" content="https://marcelomatos.dev">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marcelo Matos - DevOps">
+    <meta name="twitter:description" content="Desenvolvedor, DevOps e especialista em infraestrutura.">
+    <meta name="twitter:image" content="https://marcelomatos.dev/assets/images/twitter-card.png">
+    <meta name="twitter:creator" content="@marcelofmatos">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="keywords" content="desenvolvedor, full stack, devops, php, java, python, mysql, postgresql, docker, roraima, boa vista, infraestrutura, saas">
+    <meta name="author" content="Marcelo Matos">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/icon-16x16.png">
+    <link rel="apple-touch-icon" href="/assets/icons/icon-180x180.png">
 </head>
 <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-to-content">Pular para o conteúdo principal</a>
+    
     <div class="loading-overlay" id="loadingOverlay">
-        <div class="loader"></div>
+        <div class="loader">
+            <div class="loader-text">
+                <span class="letter">🧑🏻‍💻</span>
+                <span class="letter">🎲</span>
+                <span class="letter">📱</span>
+                <span class="letter">🎮</span>
+                <span class="letter">🎧</span>
+                <span class="letter">🧮</span>
+                <span class="letter">🐋</span>
+            </div>
+        </div>
     </div>
 
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-brand">Marcelo Matos</div>
-            <div class="nav-menu">
+            <div class="nav-brand">
+                <span class="brand-icon">💻</span>
+                Marcelo Matos
+            </div>
+            <div class="nav-menu" id="navMenu">
                 <a href="#about" class="nav-link">Sobre</a>
-                <a href="#education" class="nav-link">Formação</a>
+                <a href="#skills" class="nav-link">Skills</a>
                 <a href="#experience" class="nav-link">Experiência</a>
+                <a href="#projects" class="nav-link">Projetos</a>
+                <a href="#education" class="nav-link">Formação</a>
                 <a href="#contact" class="nav-link">Contato</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
-    <main class="container">
+    <!-- Floating Social Icons -->
+    <div class="floating-social">
+        <a href="https://github.com/marcelofmatos" target="_blank" rel="noopener" class="social-float github">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linktr.ee/marcelofmatos" target="_blank" rel="noopener" class="social-float linktree">
+            <i class="fas fa-link"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/marcelomatosdev/" target="_blank" rel="noopener" class="social-float linkedin">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+
+    <main class="container" id="main-content" role="main">
+        <!-- Hero Section -->
         <section class="hero" id="about">
-            <div class="hero-content">
+            <div class="hero-background">
+                <div class="particles" id="particles"></div>
+                <div class="code-rain"></div>
+            </div>
+            <div class="hero-content" data-aos="fade-up">
                 <div class="hero-avatar">
                     <div class="avatar-circle">
+                        <div class="avatar-pulse"></div>
                         <i class="fas fa-code"></i>
                     </div>
                 </div>
                 <h1 class="hero-title">
-                    <span class="typing-text">Marcelo Matos</span>
+                    <span class="typing-text"></span>
+                    <span class="cursor">|</span>
                 </h1>
-                <p class="hero-subtitle">Desenvolvedor & Analista de Sistemas</p>
+                <p class="hero-subtitle">
+                    <span class="highlight">Desenvolvedor</span> • 
+                    <span class="highlight">DevOps</span> • 
+                    <span class="highlight">Infraestrutura</span>
+                </p>
+                <div class="hero-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Boa Vista, Roraima, Brasil
+                </div>
                 <div class="hero-description">
-                    <p>Sou formado programador e analista desenvolvendo projetos em PHP aplicando os conhecimentos aprendidos nos cursos técnico e tecnólogo do <a href="http://www.ifrr.edu.br/" target="_blank" rel="noopener">IFRR</a>, além de projetos de infraestrutura usando soluções de gerenciamento e monitoramento. Todas as soluções trabalhadas com ênfase em softwares livres.</p>
+                    <p>Trabalho com sistemas web utilizando softwares livres como PHP, JavaScript, Java, Python, Perl, MySQL e PostgreSQL. Especializado em gerenciamento de rede, automação de sistemas em nuvem e soluções SaaS.</p>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Anos de Experiência</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Projetos Entregues</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Tecnologias</span>
+                    </div>
                 </div>
                 <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">
+                    <a href="#contact" class="btn btn-primary pulse-btn">
                         <i class="fas fa-envelope"></i>
                         Entre em Contato
                     </a>
@@ -49,75 +150,190 @@
                         <i class="fab fa-whatsapp"></i>
                         WhatsApp
                     </a>
+                    <a href="https://github.com/marcelofmatos" target="_blank" rel="noopener" class="btn btn-outline">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="section" id="education">
-            <h2 class="section-title">
-                <i class="fas fa-graduation-cap"></i>
-                Formação
+        <!-- Professional Objective -->
+        <section class="section objective-section" id="objective">
+            <div class="objective-card" data-aos="zoom-in">
+                <div class="objective-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h2>Objetivo Profissional</h2>
+                <p>Busco contribuir com minha experiência e conhecimentos para apoiar o desenvolvimento de soluções tecnológicas eficientes e inovadoras com ferramentas de automação.</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section" id="skills">
+            <h2 class="section-title" data-aos="fade-up">
+                <i class="fas fa-code"></i>
+                Tecnologias & Competências
             </h2>
-            <div class="cards-grid">
-                <div class="card education-card">
-                    <div class="card-icon">
-                        <i class="fas fa-laptop-code"></i>
+            <div class="skills-container">
+                <div class="skills-category" data-aos="fade-right">
+                    <h3 class="category-title">Frontend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="90">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <h4>JavaScript</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="85">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <h4>HTML5</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="80">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <h4>CSS3</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="80%"></div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
-                    <p>Instituto Federal de Roraima (IFRR)</p>
-                    <a href="http://www.ifrr.edu.br/campi/boa-vista/cursos/graduacao/tecnologo-em-analise-e-desenvolvimento-de-sistemas" target="_blank" rel="noopener" class="card-link">
-                        Ver curso <i class="fas fa-external-link-alt"></i>
-                    </a>
                 </div>
-                <div class="card education-card">
-                    <div class="card-icon">
-                        <i class="fas fa-desktop"></i>
+
+                <div class="skills-category" data-aos="fade-up">
+                    <h3 class="category-title">Backend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="95">
+                            <div class="skill-icon">
+                                <i class="fab fa-php"></i>
+                            </div>
+                            <h4>PHP</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="88">
+                            <div class="skill-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <h4>Java</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="85">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <h4>Python</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="85%"></div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Técnico em Informática</h3>
-                    <p>Instituto Federal de Roraima (IFRR)</p>
-                    <a href="http://www.ifrr.edu.br/" target="_blank" rel="noopener" class="card-link">
-                        Ver instituição <i class="fas fa-external-link-alt"></i>
-                    </a>
+                </div>
+
+                <div class="skills-category" data-aos="fade-left">
+                    <h3 class="category-title">Database & DevOps</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="92">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4>MySQL</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card" data-skill="88">
+                            <div class="skill-icon">
+                                <i class="fas fa-elephant"></i>
+                            </div>
+                            <h4>PostgreSQL</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category" data-aos="fade-left">
+                    <h3 class="category-title">DevOps</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="85">
+                            <div class="skill-icon">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <h4>Docker</h4>
+                            <div class="skill-progress">
+                                <div class="progress-bar" data-width="85%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Experience Section -->
         <section class="section" id="experience">
-            <h2 class="section-title">
+            <h2 class="section-title" data-aos="fade-up">
                 <i class="fas fa-briefcase"></i>
-                Onde Estive
+                Experiência Profissional
             </h2>
             <div class="timeline">
-                <div class="timeline-item current">
-                    <div class="timeline-marker"></div>
+                <div class="timeline-item current" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <i class="fas fa-play"></i>
+                    </div>
                     <div class="timeline-content">
-                        <div class="timeline-badge">Atual</div>
+                        <div class="timeline-badge current-badge">Atual</div>
+                        <div class="timeline-period">Jan 2019 - Presente</div>
                         <h3>Suporte de Infraestrutura</h3>
-                        <h4>Complemento</h4>
-                        <p>Atuando em soluções de infraestrutura e suporte técnico especializado.</p>
+                        <h4>Complemento - Liberdade e Tecnologia</h4>
+                        <div class="experience-description">
+                            <p>Atuando no suporte de infraestrutura em solução SaaS com o software ligerosmart.com, proporcionando aos clientes o gerenciamento de equipes usando metodologias ágeis com comunicação multicanal de atendimento.</p>
+                            <div class="experience-skills">
+                                <span class="skill-tag">SaaS</span>
+                                <span class="skill-tag">Metodologias Ágeis</span>
+                                <span class="skill-tag">Infraestrutura</span>
+                                <span class="skill-tag">Suporte Técnico</span>
+                            </div>
+                        </div>
                         <a href="https://complemento.net.br/" target="_blank" rel="noopener" class="timeline-link">
                             <i class="fas fa-external-link-alt"></i>
                         </a>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Técnico em Tecnologia da Informação</h3>
-                        <h4>Universidade Federal de Roraima</h4>
-                        <p>Responsável por soluções em TI e suporte técnico na instituição de ensino superior.</p>
-                        <a href="http://ufrr.br" target="_blank" rel="noopener" class="timeline-link">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <i class="fas fa-university"></i>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Coordenador Técnico</h3>
-                        <h4>Ponto de Presença da RNP em Roraima</h4>
-                        <p>Coordenação técnica do ponto de presença da Rede Nacional de Ensino e Pesquisa.</p>
-                        <a href="http://www.pop-rr.rnp.br" target="_blank" rel="noopener" class="timeline-link">
+                        <div class="timeline-period">Set 2009 - Nov 2018</div>
+                        <h3>Técnico em Informática</h3>
+                        <h4>Universidade Federal de Roraima</h4>
+                        <div class="experience-description">
+                            <p>Alocado na Coordenação de Administração de Redes e Internet, responsável pela Divisão de Administração de Servidores. Desenvolvendo sistemas web junto com o Departamento de Controle Acadêmico para serviços de atendimento aos alunos e professores da instituição.</p>
+                            <div class="experience-skills">
+                                <span class="skill-tag">Administração de Redes</span>
+                                <span class="skill-tag">Servidores</span>
+                                <span class="skill-tag">Desenvolvimento Web</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                        <a href="http://ufrr.br" target="_blank" rel="noopener" class="timeline-link">
                             <i class="fas fa-external-link-alt"></i>
                         </a>
                     </div>
@@ -125,45 +341,218 @@
             </div>
         </section>
 
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+            <h2 class="section-title" data-aos="fade-up">
+                <i class="fas fa-laptop-code"></i>
+                Projetos & Soluções
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Gerenciamento de Redes UFRR</h3>
+                        <p>Sistema web para administração de redes e servidores na Universidade Federal de Roraima, desenvolvido em Java com integração MySQL/PostgreSQL.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Redes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sistema SaaS LigeroSmart</h3>
+                        <p>Plataforma de gerenciamento de equipes com metodologias ágeis e comunicação multicanal para atendimento ao cliente.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">SaaS</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sistema Acadêmico UFRR</h3>
+                        <p>Desenvolvimento de sistemas web para controle acadêmico, atendimento a alunos e professores da instituição.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Web Development</span>
+                            <span class="tech-tag">Database</span>
+                            <span class="tech-tag">PHP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Automação em Nuvem</h3>
+                        <p>Projetos de automação de sistemas em nuvem utilizando softwares livres para otimização de processos e infraestrutura.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Cloud</span>
+                            <span class="tech-tag">DevOps</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Automação</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section" id="education">
+            <h2 class="section-title" data-aos="fade-up">
+                <i class="fas fa-graduation-cap"></i>
+                Formação Acadêmica
+            </h2>
+            <div class="education-grid">
+                <div class="education-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="education-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-period">2005 - 2008</div>
+                        <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas</h3>
+                        <h4>Instituto Federal de Roraima (IFRR)</h4>
+                        <p>Formação especializada em desenvolvimento de sistemas, utilizando linguagens como Java e bancos de dados MySQL e PostgreSQL.</p>
+                        <a href="http://www.ifrr.edu.br/campi/boa-vista/cursos/graduacao/tecnologo-em-analise-e-desenvolvimento-de-sistemas" target="_blank" rel="noopener" class="education-link">
+                            Ver curso <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="education-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="education-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-period">2002 - 2004</div>
+                        <h3>Técnico em Informática</h3>
+                        <h4>Centro Federal de Educação Tecnológica de Roraima</h4>
+                        <p>Formação técnica focada em programação para web e desenvolvimento de sistemas em geral.</p>
+                        <a href="http://www.ifrr.edu.br/" target="_blank" rel="noopener" class="education-link">
+                            Ver instituição <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
         <section class="section" id="contact">
-            <h2 class="section-title">
+            <h2 class="section-title" data-aos="fade-up">
                 <i class="fas fa-paper-plane"></i>
                 Vamos Conversar?
             </h2>
-            <div class="contact-grid">
-                <div class="contact-card whatsapp-card">
-                    <div class="contact-icon">
-                        <i class="fab fa-whatsapp"></i>
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Entre em contato comigo!</h3>
+                    <p>Estou sempre aberto a novos desafios e oportunidades. Vamos construir algo incrível juntos!</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>E-mail</h4>
+                                <a href="mailto:contato@marcelomatos.dev">contato@marcelomatos.dev</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>WhatsApp</h4>
+                                <a href="https://api.whatsapp.com/send?phone=5511977974431">(11) 977974431</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Localização</h4>
+                                <span>Boa Vista, Roraima, Brasil</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3>WhatsApp</h3>
-                    <p>Resposta rápida para conversas</p>
-                    <a href="https://api.whatsapp.com/send?phone=5511977974431&text=Oi!%20Vim%20do%20seu%20site%20marcelomatos.dev%20e%20gostaria%20de%20falar%20contigo" target="_blank" rel="noopener" class="contact-btn">
-                        <i class="fab fa-whatsapp"></i>
-                        (11) 977974431
-                    </a>
                 </div>
-                <div class="contact-card email-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>E-mail</h3>
-                    <p>Para propostas e projetos</p>
-                    <a href="mailto:contato@marcelomatos.dev" class="contact-btn">
-                        <i class="fas fa-envelope"></i>
-                        contato@marcelomatos.dev
-                    </a>
+
+                <div class="contact-form-container" data-aos="fade-left">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Seu Nome</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Seu E-mail</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Assunto</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Sua Mensagem</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensagem
+                        </button>
+                    </form>
                 </div>
             </div>
-            <div class="social-section">
+
+            <div class="social-section" data-aos="fade-up" data-aos-delay="300">
                 <h3>Redes Sociais</h3>
                 <div class="social-links">
-                    <a href="https://twitter.com/marcelofmatos" target="_blank" rel="noopener" class="social-link twitter">
-                        <i class="fab fa-twitter"></i>
-                        <span>Twitter</span>
+                    <a href="https://github.com/marcelofmatos" target="_blank" rel="noopener" class="social-link github">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://linktr.ee/marcelofmatos" target="_blank" rel="noopener" class="social-link linktree">
+                        <i class="fas fa-link"></i>
+                        <span>Linktree</span>
                     </a>
                     <a href="https://www.linkedin.com/in/marcelomatosdev/" target="_blank" rel="noopener" class="social-link linkedin">
                         <i class="fab fa-linkedin-in"></i>
                         <span>LinkedIn</span>
+                    </a>
+                    <a href="https://twitter.com/marcelofmatos" target="_blank" rel="noopener" class="social-link twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
                     </a>
                 </div>
             </div>
@@ -172,10 +561,19 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2025 Marcelo Matos. Desenvolvido com <i class="fas fa-heart"></i> e softwares livres.</p>
+            <div class="footer-left">
+                <p>&copy; 2025 Marcelo Matos. Feito com <span class="heart">❤️</span> e softwares livres.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#about" class="footer-link">
+                    <i class="fas fa-chevron-up"></i>
+                    Voltar ao topo
+                </a>
+            </div>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
