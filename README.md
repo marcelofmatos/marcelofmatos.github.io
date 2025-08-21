@@ -32,8 +32,17 @@ Site pessoal e portfólio profissional de Marcelo Matos, desenvolvedor Full Stac
 
 #### 💻 Skills & Competências
 - **Frontend**: JavaScript, HTML5, CSS3
-- **Backend**: PHP, Java, Python
-- **Database & DevOps**: MySQL, PostgreSQL, Docker
+- **Backend**: PHP, Java, Python, Perl
+- **Database**: MySQL, PostgreSQL
+- **DevOps & Containerização**: Docker, Kubernetes, Docker Compose, Docker Swarm
+- **Cloud Platforms**: AWS, Google Cloud, Azure, DigitalOcean
+- **Infrastructure as Code**: Terraform, Ansible, Puppet, Chef
+- **CI/CD & Automation**: Jenkins, GitLab CI, GitHub Actions, ArgoCD
+- **Monitoring & Observability**: Grafana, Prometheus, ELK Stack, Nagios, Zabbix, DataDog
+- **Operating Systems**: Linux, Ubuntu, CentOS/RHEL, Bash/Shell Scripting
+- **Version Control**: Git, GitHub, GitLab, Bitbucket
+- **Security & Compliance**: Security Scanning, SSL/TLS, Secrets Management, IAM
+- **Networking & Infrastructure**: Network Administration, Server Administration
 - Barras de progresso animadas
 - Cards interativos com hover effects
 
@@ -54,6 +63,9 @@ Site pessoal e portfólio profissional de Marcelo Matos, desenvolvedor Full Stac
 - **Sistema SaaS LigeroSmart**
 - **Sistema Acadêmico UFRR**
 - **Automação em Nuvem**
+- **Containerização com Docker**
+- **Monitoring & Observability**
+- **CI/CD Pipelines**
 - Cards com hover effects e tecnologias utilizadas
 
 #### 🎓 Formação Acadêmica
