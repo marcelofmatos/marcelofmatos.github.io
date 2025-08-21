@@ -362,7 +362,7 @@ function initContactForm() {
         const message = formData.get('message');
         
         // Create mailto link
-        const mailtoLink = `mailto:marcelofmatos@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`)}`;
+        const mailtoLink = `${contactEmailLink.href}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`)}`;
         
         // Open email client
         window.location.href = mailtoLink;
