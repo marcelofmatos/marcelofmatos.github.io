@@ -1,1 +1,12 @@
-theme: jekyll-theme-time-machine
+# Desabilitando Jekyll para usar HTML puro
+# theme: jekyll-theme-time-machine
+
+# Configurações básicas do site
+title: "Marcelo Matos - Desenvolvedor & Analista de Sistemas"
+description: "Desenvolvedor PHP e Analista de Sistemas especializado em softwares livres e infraestrutura"
+url: "https://marcelofmatos.github.io"
+baseurl: ""
+
+# Desabilita processamento Jekyll
+github:
+  is_project_page: false
