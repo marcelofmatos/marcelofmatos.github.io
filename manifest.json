@@ -29,6 +29,16 @@
     ],
     "icons": [
         {
+        "src": "/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+        },
+        {
+        "src": "/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+        },
+        {
             "src": "assets/icons/icon-72x72.png",
             "sizes": "72x72",
             "type": "image/png",
@@ -140,4 +150,6 @@
     "launch_handler": {
         "client_mode": "navigate-existing"
     }
+
+
 }
