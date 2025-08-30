@@ -29,59 +29,49 @@
     ],
     "icons": [
         {
-        "src": "/android-chrome-192x192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-        },
-        {
-        "src": "/android-chrome-512x512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-        },
-        {
-            "src": "assets/icons/icon-72x72.png",
-            "sizes": "72x72",
+            "src": "/assets/icons/apple-touch-icon-57x57.png",
+            "sizes": "57x57",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src": "assets/icons/icon-96x96.png",
-            "sizes": "96x96", 
+            "src": "/assets/icons/apple-touch-icon-76x76.png",
+            "sizes": "76x76",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src": "assets/icons/icon-128x128.png",
-            "sizes": "128x128",
+            "src": "/assets/icons/apple-touch-icon-120x120.png",
+            "sizes": "120x120",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src": "assets/icons/icon-144x144.png",
+            "src": "/assets/icons/apple-touch-icon-144x144.png",
             "sizes": "144x144",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src": "assets/icons/icon-152x152.png",
+            "src": "/assets/icons/apple-touch-icon-152x152.png",
             "sizes": "152x152",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src": "assets/icons/icon-192x192.png",
+            "src": "/assets/icons/apple-touch-icon-180x180.png",
+            "sizes": "180x180",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/assets/icons/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src": "assets/icons/icon-384x384.png",
-            "sizes": "384x384",
-            "type": "image/png",
-            "purpose": "any maskable"
-        },
-        {
-            "src": "assets/icons/icon-512x512.png",
+            "src": "/assets/icons/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
@@ -95,7 +85,7 @@
             "url": "/#contact",
             "icons": [
                 {
-                    "src": "assets/icons/contact-96x96.png",
+                    "src": "assets/icons/apple-touch-icon-120x120.png",
                     "sizes": "96x96"
                 }
             ]
@@ -107,7 +97,7 @@
             "url": "/#projects",
             "icons": [
                 {
-                    "src": "assets/icons/projects-96x96.png",
+                    "src": "assets/icons/apple-touch-icon-120x120.png",
                     "sizes": "96x96"
                 }
             ]
@@ -119,7 +109,7 @@
             "url": "/#skills",
             "icons": [
                 {
-                    "src": "assets/icons/skills-96x96.png",
+                    "src": "assets/icons/apple-touch-icon-120x120.png",
                     "sizes": "96x96"
                 }
             ]
@@ -131,7 +121,7 @@
             "url": "https://api.whatsapp.com/send?phone=5511977974431&text=Oi!%20Vim%20do%20seu%20site%20e%20gostaria%20de%20falar%20contigo",
             "icons": [
                 {
-                    "src": "assets/icons/whatsapp-96x96.png",
+                    "src": "assets/icons/apple-touch-icon-120x120.png",
                     "sizes": "96x96"
                 }
             ]
@@ -150,6 +140,4 @@
     "launch_handler": {
         "client_mode": "navigate-existing"
     }
-
-
 }
