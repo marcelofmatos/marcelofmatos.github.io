@@ -42,7 +42,7 @@ function startInitialAnimations() {
     // Animate hero stats
     animateCounters();
     // Start typing effect
-    startTypingEffect();
+    startTypingEffect(document.querySelector('.site-title').textContent);
 }
 
 // Particles Animation
@@ -190,13 +190,12 @@ function initTypingEffect() {
     // This will be started after loading
 }
 
-function startTypingEffect() {
+function startTypingEffect(text) {
     const typingElement = document.querySelector('.typing-text');
     const cursor = document.querySelector('.cursor');
     
     if (!typingElement) return;
     
-    const text = 'Marcelo Matos';
     const speed = 100;
     let i = 0;
     

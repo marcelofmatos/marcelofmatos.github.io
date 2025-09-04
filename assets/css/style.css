@@ -1619,6 +1619,14 @@ textarea:valid {
     margin-top: 0.5rem;
 }
 
+.small {
+    font-size: 1.1em;
+}
+
+.typing-text {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
 /* Smooth scroll behavior for older browsers */
 html {
     scroll-behavior: smooth;
