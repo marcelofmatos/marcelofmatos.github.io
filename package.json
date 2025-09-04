@@ -31,8 +31,9 @@
         "docker",
         "infrastructure",
         "saas",
-        "roraima",
-        "brazil"
+        "remote",
+        "online",
+        "global"
     ],
     "author": {
         "name": "Marcelo Matos",
