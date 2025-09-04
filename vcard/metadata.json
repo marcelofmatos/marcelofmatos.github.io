@@ -35,11 +35,11 @@
       "linktree": "https://linktr.ee/marcelofmatos"
     },
     "address": {
-      "city": "Boa Vista",
-      "state": "Roraima",
-      "country": "Brasil",
-      "postal_code": "69000-000",
-      "formatted": "Boa Vista, Roraima - Brasil"
+      "region": "Atendimento Remoto",
+      "availability": "Disponível Globalmente",
+      "service_type": "100% Remoto",
+      "coverage": "Mundial",
+      "formatted": "Atendimento Remoto - Disponível Globalmente"
     }
   },
   "professional": {
@@ -51,7 +51,9 @@
       "Automação em Nuvem",
       "Softwares Livres",
       "Containerização",
-      "Metodologias Ágeis"
+      "Metodologias Ágeis",
+      "Atendimento Remoto",
+      "Trabalho Distribuído"
     ],
     "technologies": {
       "languages": ["PHP", "JavaScript", "Java", "Python", "Perl"],
@@ -64,7 +66,7 @@
       "position": "Suporte de Infraestrutura",
       "company": "Complemento - Liberdade e Tecnologia",
       "start_date": "2019-01",
-      "description": "Atuando no suporte de infraestrutura em solução SaaS"
+      "description": "Atuando no suporte de infraestrutura em solução SaaS com atendimento 100% remoto"
     },
     "previous_role": {
       "position": "Técnico em Informática",
