@@ -47,7 +47,7 @@
 
 #### 📋 **Informações Pessoais**
 - **Nome**: Marcelo Matos
-- **Localização**: Boa Vista, Roraima, Brasil
+- **Localização**: Atendimento Remoto - Disponível Globalmente
 - **Contato**: (11) 977974431 / marcelofmatos@gmail.com
 - **GitHub**: github.com/marcelofmatos
 - **Linktree**: linktr.ee/marcelofmatos
@@ -196,6 +196,46 @@ Se precisar de ajustes ou tiver dúvidas:
 - **Email**: marcelofmatos@gmail.com
 - **WhatsApp**: (11) 977974431
 - **GitHub Issues**: github.com/marcelofmatos/marcelofmatos.github.io
+
+---
+
+## 🌍 **V2.2 - Remote Work Optimization (Setembro 2025)**
+
+### 🎯 **Foco em Atendimento Remoto**
+
+#### ✨ **Principais Mudanças**
+- **Remoção de referências geográficas** específicas (Boa Vista, Roraima, Brasil)
+- **Ênfase no atendimento 100% remoto** para clientes em qualquer localização
+- **Posicionamento global** para ampliar alcance de mercado
+- **Otimização SEO** com palavras-chave voltadas para trabalho remoto
+
+#### 📝 **Arquivos Atualizados**
+- **index.html**: Descrições e seções de contato
+- **_config.yml**: Configurações de localização e SEO
+- **contato.vcf** e **vcard/**: Informações de contato
+- **package.json**: Keywords SEO atualizadas
+- **sitemap.xml**: Data de modificação atualizada
+- **index.md**: Introdução com destaque remoto
+- **CHANGELOG.md**: Documentação das mudanças
+
+#### 🎨 **Melhorias de Conteúdo**
+- **Objetivo Profissional**: Destaque para serviços remotos de alta qualidade
+- **Hero Section**: "Atendimento 100% remoto" em destaque
+- **Seção de Contato**: Mensagem de disponibilidade global
+- **vCard**: Endereço atualizado para "Atendimento Remoto - Disponível Globalmente"
+
+#### 🔍 **SEO Otimizado**
+- **Keywords**: "remoto", "online", "global" substituindo termos geográficos
+- **Meta Description**: Foco em disponibilidade global
+- **Structured Data**: Preparado para alcance internacional
+
+#### 🌐 **Impacto Estratégico**
+- **Mercado Ampliado**: De regional para global
+- **Flexibilidade**: Trabalho 100% remoto
+- **Competitividade**: Posicionamento internacional
+- **Escalabilidade**: Sem limitações geográficas
+
+**🚀 Portfolio agora posicionado para mercado global com foco total em trabalho remoto!**
 
 ---
 
