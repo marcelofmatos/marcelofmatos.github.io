@@ -37,7 +37,7 @@
       </text>
     </g>
 
-    <g transform="translate(0,0)">
+    <g transform="translate(-5,0)">
       <text x="0" y="3" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="500">
         ⚙️ DevOps
       </text>
