@@ -1,23 +1,22 @@
 <svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#7c3aed"/>
-      <stop offset="100%" style="stop-color:#5b21b6"/>
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#4f46e5"/>
     </linearGradient>
-    <clipPath id="circleClip">
-      <circle cx="200" cy="80" r="30"/>
-    </clipPath>
+
   </defs>
 
   <!-- Fundo com gradiente -->
   <rect width="400" height="250" rx="12" fill="url(#backgroundGradient)"/>
 
-  <!-- Círculo de fundo para o avatar - raio reduzido -->
-  <circle cx="200" cy="80" r="30" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <!-- Círculo de fundo para o ícone de código -->
+  <circle cx="200" cy="80" r="35" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
 
-  <!-- Avatar central usando o favicon - tamanho ajustado -->
-  <image x="167" y="48" width="65" height="65" href="https://marcelomatos.dev/assets/icons/android-chrome-192x192.png"
-         clip-path="url(#circleClip)" opacity="1"/>
+  <!-- Ícone de código </> -->
+  <text x="200" y="90" text-anchor="middle" fill="white" font-family="'Fira Code', 'Source Code Pro', monospace" font-size="28" font-weight="600">
+    &lt;/&gt;
+  </text>
 
   <!-- Título principal com fonte monospace -->
   <text x="200" y="140" text-anchor="middle" fill="white" font-family="'Fira Code', 'Source Code Pro', 'Consolas', 'Monaco', 'Menlo', monospace" font-size="22" font-weight="700">
@@ -25,29 +24,28 @@
   </text>
 
   <!-- Subtítulo com fonte reduzida -->
-  <text x="200" y="160" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="400">
-    Desenvolvedor de Ideias em Infraestrutura Escalável
+  <text x="200" y="160" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="400">
+    Desenvolvendo ideias escalando qualidade
   </text>
 
-  <!-- Badges horizontais sem fundo - bem separadas -->
-  <g transform="translate(200,185)">
-    <g transform="translate(-80,0)">
-      <text x="0" y="3" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="500">
-        💻 Desenvolvedor
-      </text>
-    </g>
+  <!-- Seções do processo com ícones de ciclo -->
+  <g transform="translate(190,195)">
 
-    <g transform="translate(-5,0)">
-      <text x="0" y="3" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="500">
-        ⚙️ DevOps
-      </text>
-    </g>
+    <!-- Análise -->
+    <text x="-95" y="3" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500">
+      🧠 Análise
+    </text>
 
-    <g transform="translate(80,0)">
-      <text x="0" y="3" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="500">
-        🏗️ Infraestrutura de TI
-      </text>
-    </g>
+    <!-- Desenvolvimento -->
+    <text x="0" y="3" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500">
+      💻 Desenvolvimento
+    </text>
+
+    <!-- Implantação -->
+    <text x="105" y="3" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="500">
+      🚀 Implantação
+    </text>
+
   </g>
 
   <!-- QR Code funcional no canto superior direito -->
