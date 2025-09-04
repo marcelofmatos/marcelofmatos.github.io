@@ -1,0 +1,115 @@
+{
+  "vcard": {
+    "version": "4.0",
+    "format": "text/vcard",
+    "encoding": "UTF-8",
+    "created": "2025-09-04",
+    "updated": "2025-09-04",
+    "filename": "marcelo-matos.vcf",
+    "url": "https://marcelomatos.dev/vcard/marcelo-matos.vcf"
+  },
+  "contact": {
+    "full_name": "Marcelo Matos",
+    "given_name": "Marcelo",
+    "family_name": "Matos",
+    "organization": "Complemento - Liberdade e Tecnologia",
+    "title": "Desenvolvedor Full Stack / DevOps",
+    "phone": {
+      "primary": "+55-11-977974431",
+      "whatsapp": "+5511977974431",
+      "formatted": "(11) 977974431"
+    },
+    "email": {
+      "work": "contato@marcelomatos.dev",
+      "personal": "marcelofmatos@gmail.com"
+    },
+    "web": {
+      "website": "https://marcelomatos.dev",
+      "portfolio": "https://marcelomatos.dev",
+      "blog": "https://marcelomatos.dev"
+    },
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/marcelomatosdev/",
+      "github": "https://github.com/marcelofmatos",
+      "twitter": "https://twitter.com/marcelofmatos",
+      "linktree": "https://linktr.ee/marcelofmatos"
+    },
+    "address": {
+      "city": "Boa Vista",
+      "state": "Roraima",
+      "country": "Brasil",
+      "postal_code": "69000-000",
+      "formatted": "Boa Vista, Roraima - Brasil"
+    }
+  },
+  "professional": {
+    "experience_years": "15+",
+    "specialties": [
+      "Desenvolvimento Full Stack",
+      "DevOps",
+      "Infraestrutura de TI",
+      "Automação em Nuvem",
+      "Softwares Livres",
+      "Containerização",
+      "Metodologias Ágeis"
+    ],
+    "technologies": {
+      "languages": ["PHP", "JavaScript", "Java", "Python", "Perl"],
+      "databases": ["MySQL", "PostgreSQL"],
+      "cloud": ["AWS", "Google Cloud", "Azure", "DigitalOcean"],
+      "devops": ["Docker", "Kubernetes", "Jenkins", "GitLab CI", "GitHub Actions"],
+      "monitoring": ["Grafana", "Prometheus", "ELK Stack", "Nagios", "Zabbix"]
+    },
+    "current_role": {
+      "position": "Suporte de Infraestrutura",
+      "company": "Complemento - Liberdade e Tecnologia",
+      "start_date": "2019-01",
+      "description": "Atuando no suporte de infraestrutura em solução SaaS"
+    },
+    "previous_role": {
+      "position": "Técnico em Informática",
+      "company": "Universidade Federal de Roraima",
+      "period": "2009-2018",
+      "description": "Coordenação de Administração de Redes e Internet"
+    }
+  },
+  "education": {
+    "degree": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+    "institution": "Instituto Federal de Roraima (IFRR)",
+    "period": "2005-2008",
+    "technical": {
+      "course": "Técnico em Informática",
+      "institution": "Centro Federal de Educação Tecnológica de Roraima",
+      "period": "2002-2004"
+    }
+  },
+  "stats": {
+    "experience": "15+ anos",
+    "projects": "100+",
+    "technologies": "50+",
+    "clients_served": "Multiple",
+    "uptime_focus": "99.9%"
+  },
+  "metadata": {
+    "qr_code": "available",
+    "web_interface": "https://marcelomatos.dev/vcard/",
+    "download_direct": "https://marcelomatos.dev/vcard/marcelo-matos.vcf",
+    "compatibility": [
+      "iOS Contacts",
+      "Android Contacts", 
+      "Google Contacts",
+      "Outlook",
+      "Thunderbird",
+      "Evolution",
+      "KAddressBook"
+    ],
+    "features": [
+      "QR Code generation",
+      "Social media links",
+      "WhatsApp integration",
+      "Professional categorization",
+      "UTF-8 encoding",
+      "vCard 4.0 standard"
+    ]
+  }
+}

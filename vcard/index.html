@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vCard - Marcelo Matos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #f1f5f9;
+        }
+        
+        .header h1 {
+            color: #1e293b;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+        
+        .vcard-preview {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .info-item i {
+            color: #3b82f6;
+            width: 20px;
+            text-align: center;
+            margin-right: 0.75rem;
+        }
+        
+        .info-item span {
+            color: #1e293b;
+            font-weight: 500;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #1e293b;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-2px);
+        }
+        
+        .social-link.linkedin { background: #0077b5; }
+        .social-link.github { background: #333; }
+        .social-link.twitter { background: #1da1f2; }
+        
+        .actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: #3b82f6;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: #64748b;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #475569;
+        }
+        
+        .qr-section {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: #f8fafc;
+            border-radius: 12px;
+        }
+        
+        .qr-code {
+            margin: 1rem 0;
+        }
+        
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            white-space: pre-wrap;
+            text-align: left;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        .specs {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+        
+        .specs h3 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+        
+        .specs ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .specs li {
+            padding: 0.5rem 0;
+            color: #475569;
+            display: flex;
+            align-items: center;
+        }
+        
+        .specs li i {
+            color: #10b981;
+            margin-right: 0.5rem;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+            
+            .actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-address-card"></i> vCard</h1>
+            <p>Cartão de Visita Digital - Marcelo Matos</p>
+        </div>
+
+        <div class="vcard-preview">
+            <h2 style="color: #1e293b; margin-bottom: 1rem;">
+                <i class="fas fa-user-circle"></i> Marcelo Matos
+            </h2>
+            <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 1.5rem;">
+                Desenvolvedor Full Stack / DevOps<br>
+                <strong>Complemento - Liberdade e Tecnologia</strong>
+            </p>
+            
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>contato@marcelomatos.dev</span>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>+55 (11) 977974431</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-globe"></i>
+                    <span>marcelomatos.dev</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Boa Vista, Roraima - Brasil</span>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/marcelomatosdev/" class="social-link linkedin" target="_blank">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+                <a href="https://github.com/marcelofmatos" class="social-link github" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://twitter.com/marcelofmatos" class="social-link twitter" target="_blank">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a href="https://linktr.ee/marcelofmatos" class="social-link" target="_blank">
+                    <i class="fas fa-link"></i> Linktree
+                </a>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="marcelo-matos.vcf" download class="btn btn-primary">
+                <i class="fas fa-download"></i>
+                Baixar vCard (.vcf)
+            </a>
+            <button onclick="copyToClipboard()" class="btn btn-secondary">
+                <i class="fas fa-copy"></i>
+                Copiar Link
+            </button>
+            <button onclick="generateQR()" class="btn btn-secondary">
+                <i class="fas fa-qrcode"></i>
+                Gerar QR Code
+            </button>
+        </div>
+
+        <div id="qrSection" class="qr-section" style="display: none;">
+            <h3><i class="fas fa-qrcode"></i> QR Code do vCard</h3>
+            <p>Escaneie com seu smartphone para adicionar aos contatos</p>
+            <div id="qrcode" class="qr-code"></div>
+        </div>
+
+        <div class="specs">
+            <h3><i class="fas fa-info-circle"></i> Especificações Técnicas</h3>
+            <ul>
+                <li><i class="fas fa-check"></i> Formato: vCard 4.0 (RFC 6350)</li>
+                <li><i class="fas fa-check"></i> Codificação: UTF-8</li>
+                <li><i class="fas fa-check"></i> Compatível com todos os dispositivos</li>
+                <li><i class="fas fa-check"></i> Suporte a redes sociais</li>
+                <li><i class="fas fa-check"></i> Campos customizados incluídos</li>
+            </ul>
+        </div>
+
+        <details style="margin: 1.5rem 0;">
+            <summary style="cursor: pointer; font-weight: 600; padding: 1rem; background: #f8fafc; border-radius: 8px;">
+                <i class="fas fa-code"></i> Ver Código vCard
+            </summary>
+            <div class="code-block" id="vcardCode">
+BEGIN:VCARD
+VERSION:4.0
+FN:Marcelo Matos
+N:Matos;Marcelo;;;
+ORG:Complemento - Liberdade e Tecnologia
+TITLE:Desenvolvedor Full Stack / DevOps
+TEL;TYPE=cell,voice:+55-11-977974431
+EMAIL;TYPE=work:contato@marcelomatos.dev
+EMAIL;TYPE=home:marcelofmatos@gmail.com
+URL:https://marcelomatos.dev
+ADR;TYPE=work:;;Boa Vista;Roraima;;69000-000;Brasil
+IMPP:whatsapp:tel:+5511977974431
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/marcelomatosdev/
+X-SOCIALPROFILE;TYPE=github:https://github.com/marcelofmatos
+X-SOCIALPROFILE;TYPE=twitter:https://twitter.com/marcelofmatos
+X-SOCIALPROFILE;TYPE=linktree:https://linktr.ee/marcelofmatos
+NOTE:Desenvolvedor Full Stack e DevOps com mais de 15 anos de experiência.
+CATEGORIES:Desenvolvedor,DevOps,Tecnologia,Software Livre,Infraestrutura
+REV:2025-09-04T00:00:00Z
+END:VCARD
+            </div>
+        </details>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.5.3/qrcode.min.js"></script>
+    <script>
+        function copyToClipboard() {
+            const url = window.location.href.replace('/index.html', '/marcelo-matos.vcf');
+            navigator.clipboard.writeText(url).then(() => {
+                alert('Link copiado para a área de transferência!');
+            });
+        }
+
+        function generateQR() {
+            const qrSection = document.getElementById('qrSection');
+            const qrCodeDiv = document.getElementById('qrcode');
+            
+            if (qrSection.style.display === 'none') {
+                qrSection.style.display = 'block';
+                qrCodeDiv.innerHTML = '';
+                
+                const vcardData = document.getElementById('vcardCode').textContent.trim();
+                
+                QRCode.toCanvas(qrCodeDiv, vcardData, {
+                    width: 256,
+                    margin: 2,
+                    color: {
+                        dark: '#1e293b',
+                        light: '#ffffff'
+                    }
+                }, function (error) {
+                    if (error) {
+                        console.error('Erro ao gerar QR Code:', error);
+                        qrCodeDiv.innerHTML = '<p style="color: red;">Erro ao gerar QR Code</p>';
+                    }
+                });
+            } else {
+                qrSection.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('vCard page loaded successfully');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+# Configuração para servir vCards corretamente
+AddType text/vcard .vcf
+AddType text/x-vcard .vcf
+
+# Headers para download de vCard
+<FilesMatch "\.(vcf)$">
+    Header set Content-Type "text/vcard; charset=utf-8"
+    Header set Content-Disposition "attachment"
+</FilesMatch>
+
+# Cache para arquivos vCard (1 dia)
+<FilesMatch "\.(vcf)$">
+    ExpiresActive On
+    ExpiresByType text/vcard "access plus 1 day"
+</FilesMatch>
+
+# Compressão para arquivos texto
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/vcard
+</IfModule>
+
+# Segurança - evitar execução de scripts
+Options -ExecCGI
+RemoveHandler .cgi .pl .py .sh
+
+# Listagem de diretório habilitada para facilitar acesso
+Options +Indexes
+
+# Página padrão
+DirectoryIndex index.html
