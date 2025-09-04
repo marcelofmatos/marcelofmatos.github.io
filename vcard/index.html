@@ -154,11 +154,34 @@
         }
         
         .qr-section {
+            position: fixed;
+            top: 20px;
+            right: 20px;
             text-align: center;
-            margin: 2rem 0;
-            padding: 2rem;
-            background: #f8fafc;
+            padding: 1rem;
+            background: rgba(248, 250, 252, 0.95);
             border-radius: 12px;
+            border: 2px solid #e2e8f0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            z-index: 1000;
+            max-width: 200px;
+        }
+        
+        .qr-section h3 {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
+        
+        .qr-section p {
+            font-size: 0.7rem;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+        }
+        
+        .qr-section img {
+            width: 120px;
+            height: 120px;
         }
         
         .qr-code {
@@ -221,6 +244,18 @@
             .btn {
                 width: 100%;
                 justify-content: center;
+            }
+            
+            .qr-section {
+                top: 10px;
+                right: 10px;
+                max-width: 150px;
+                padding: 0.75rem;
+            }
+            
+            .qr-section img {
+                width: 100px;
+                height: 100px;
             }
         }
     </style>
@@ -285,16 +320,15 @@
                 <i class="fas fa-copy"></i>
                 Copiar Link
             </button>
-            <button onclick="generateQR()" class="btn btn-secondary">
-                <i class="fas fa-qrcode"></i>
-                Gerar QR Code
-            </button>
+
         </div>
 
-        <div id="qrSection" class="qr-section" style="display: none;">
-            <h3><i class="fas fa-qrcode"></i> QR Code do vCard</h3>
-            <p>Escaneie com seu smartphone para adicionar aos contatos</p>
-            <div id="qrcode" class="qr-code"></div>
+        <div id="qrSection" class="qr-section">
+            <h3><i class="fas fa-qrcode"></i> QR Code</h3>
+            <p>Escaneie para adicionar</p>
+            <div>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&amp;data=https://marcelomatos.dev/vcard/marcelo-matos.vcf" />
+            </div>
         </div>
 
         <div class="specs">
@@ -312,28 +346,17 @@
             <summary style="cursor: pointer; font-weight: 600; padding: 1rem; background: #f8fafc; border-radius: 8px;">
                 <i class="fas fa-code"></i> Ver Código vCard
             </summary>
-            <div class="code-block" id="vcardCode">
-BEGIN:VCARD
-VERSION:4.0
-FN:Marcelo Matos
-N:Matos;Marcelo;;;
-ORG:Complemento - Liberdade e Tecnologia
-TITLE:Desenvolvedor Full Stack / DevOps
-TEL;TYPE=cell,voice:+55-11-977974431
-EMAIL;TYPE=work:contato@marcelomatos.dev
-EMAIL;TYPE=home:marcelofmatos@gmail.com
-URL:https://marcelomatos.dev
-ADR;TYPE=work:;;Boa Vista;Roraima;;69000-000;Brasil
-IMPP:whatsapp:tel:+5511977974431
-X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/marcelomatosdev/
-X-SOCIALPROFILE;TYPE=github:https://github.com/marcelofmatos
-X-SOCIALPROFILE;TYPE=twitter:https://twitter.com/marcelofmatos
-X-SOCIALPROFILE;TYPE=linktree:https://linktr.ee/marcelofmatos
-NOTE:Desenvolvedor Full Stack e DevOps com mais de 15 anos de experiência.
-CATEGORIES:Desenvolvedor,DevOps,Tecnologia,Software Livre,Infraestrutura
-REV:2025-09-04T00:00:00Z
-END:VCARD
-            </div>
+            <pre class="code-block" id="vcardCode"></pre>
+            <script>
+            fetch('marcelo-matos.vcf')
+                .then(response => response.text())
+                .then(text => {
+                    document.getElementById('vcardCode').textContent = text;
+                })
+                .catch(() => {
+                    document.getElementById('vcardCode').textContent = 'Não foi possível carregar o vCard.';
+                });
+            </script>
         </details>
     </div>
 
@@ -346,33 +369,7 @@ END:VCARD
             });
         }
 
-        function generateQR() {
-            const qrSection = document.getElementById('qrSection');
-            const qrCodeDiv = document.getElementById('qrcode');
-            
-            if (qrSection.style.display === 'none') {
-                qrSection.style.display = 'block';
-                qrCodeDiv.innerHTML = '';
-                
-                const vcardData = document.getElementById('vcardCode').textContent.trim();
-                
-                QRCode.toCanvas(qrCodeDiv, vcardData, {
-                    width: 256,
-                    margin: 2,
-                    color: {
-                        dark: '#1e293b',
-                        light: '#ffffff'
-                    }
-                }, function (error) {
-                    if (error) {
-                        console.error('Erro ao gerar QR Code:', error);
-                        qrCodeDiv.innerHTML = '<p style="color: red;">Erro ao gerar QR Code</p>';
-                    }
-                });
-            } else {
-                qrSection.style.display = 'none';
-            }
-        }
+
 
         document.addEventListener('DOMContentLoaded', function() {
             console.log('vCard page loaded successfully');
