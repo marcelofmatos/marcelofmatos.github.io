@@ -1,7 +1,9 @@
 # Marcelo Matos
 
-Sou formado programador e analista desenvolvendo projetos em PHP aplicando os conhecimentos aprendidos nos cursos técnico e tecnólogo
-do [IFRR](http://www.ifrr.edu.br/), além de projetos de infraestrutura usando soluções de gerenciamento e monitoramento. Todas as soluções trabalhadas com ênfase em sofwares livres.
+Sou programador e analista desenvolvendo projetos em PHP aplicando os conhecimentos aprendidos nos cursos técnico e tecnólogo
+do [IFRR](http://www.ifrr.edu.br/), além de projetos de infraestrutura usando soluções de gerenciamento e monitoramento. Todas as soluções trabalhadas com ênfase em softwares livres.
+
+**Atendimento 100% remoto para clientes em qualquer localização.**
 
 ## Formação
 

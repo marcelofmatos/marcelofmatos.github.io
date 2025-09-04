@@ -13,7 +13,7 @@ baseurl: ""
 developer:
   name: "Marcelo Matos"
   role: "Desenvolvedor Full Stack & DevOps"
-  location: "Boa Vista, Roraima, Brasil"
+  location: "Atendimento Remoto - Disponível Globalmente"
   phone: "(11) 977974431"
   github: "marcelofmatos"
   linktree: "marcelofmatos"
@@ -26,7 +26,7 @@ technologies:
   devops: ["Docker", "DevOps", "Cloud"]
 
 # SEO e Meta
-keywords: "desenvolvedor, full stack, devops, php, java, python, mysql, postgresql, docker, roraima, boa vista, infraestrutura, saas"
+keywords: "desenvolvedor, full stack, devops, php, java, python, mysql, postgresql, docker, remoto, online, infraestrutura, saas"
 lang: "pt-BR"
 
 # Social Media
