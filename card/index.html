@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcelo Matos - Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .card {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                max-width: 90vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <object data="../card.svg" type="image/svg+xml" class="card" aria-label="Cartão de apresentação Marcelo Matos">
+            <img src="../card.svg" alt="Marcelo Matos - marcelomatos.dev - Desenvolvendo ideias escalando qualidade" class="card">
+        </object>
+    </div>
+</body>
+</html>
