@@ -1408,6 +1408,11 @@ body {
         min-width: 160px !important;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
         transition: all 0.3s ease !important;
+        /* FIX TRANSPARENT TEXT */
+        color: white !important;
+        -webkit-text-fill-color: white !important;
+        background-clip: border-box !important;
+        -webkit-background-clip: border-box !important;
     }
     
     .hero-location .highlight:hover {
@@ -1492,6 +1497,11 @@ body {
         min-height: 44px !important;
         margin: 0.4rem 0 !important;
         min-width: 140px !important;
+        /* FIX TRANSPARENT TEXT */
+        color: white !important;
+        -webkit-text-fill-color: white !important;
+        background-clip: border-box !important;
+        -webkit-background-clip: border-box !important;
     }
 }
 
