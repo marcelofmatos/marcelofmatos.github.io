@@ -301,7 +301,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
     padding: 0 1rem;
     width: 100%;
 }
@@ -1367,24 +1366,30 @@ body {
     
     /* Fix workflow icons section for mobile */
     .hero-location {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
+        flex-direction: column !important;
+        gap: 1rem !important;
+        align-items: center !important;
         font-size: 0.95rem;
+        margin-bottom: 2rem !important;
+        display: flex !important;
+        opacity: 1 !important;
     }
     
     .hero-location .arrow {
-        display: none;
+        display: none !important;
     }
     
     .hero-location .highlight {
-        display: flex;
+        display: flex !important;
         align-items: center;
         gap: 0.5rem;
         padding: 0.5rem 1rem;
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.15);
         border-radius: 20px;
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        min-height: 40px;
+        margin: 0.25rem 0;
     }
 }
 
@@ -1429,6 +1434,21 @@ body {
     
     .stat-label {
         font-size: 0.8rem;
+    }
+    
+    /* Ensure workflow section remains visible */
+    .hero-location {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+        margin-bottom: 2rem !important;
+        font-size: 0.9rem;
+    }
+    
+    .hero-location .highlight {
+        display: flex !important;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
     }
 }
 
