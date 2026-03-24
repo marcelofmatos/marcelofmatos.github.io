@@ -29,7 +29,7 @@
     <meta property="og:title" content="Repositórios GitHub - Marcelo Matos">
     <meta property="og:description" content="Últimos repositórios atualizados no GitHub de Marcelo Matos, desenvolvedor Full Stack & DevOps.">
     <meta property="og:image" content="https://marcelomatos.dev/assets/images/og-image.png">
-    <meta property="og:url" content="https://marcelomatos.dev/repo.html">
+    <meta property="og:url" content="https://marcelomatos.dev/github.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
 
@@ -171,13 +171,30 @@
         .tech-tag.star-tag  { background: var(--accent-color); }
         .tech-tag.fork-tag  { background: #6c757d; }
         .tech-tag.issue-tag { background: #ef4444; }
-        .repo-card .education-link {
+        .repo-github-btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.4rem;
-            margin-top: 1rem;
-            font-size: 0.9rem;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1.25rem;
+            padding: 0.6rem 1.1rem;
+            width: 100%;
+            background: #24292e;
+            color: white !important;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            font-family: inherit;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
         }
+        .repo-github-btn:hover {
+            background: #3a434e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+        }
+        .repo-github-btn i { font-size: 1rem; }
         .card-overlay-badge {
             position: absolute;
             top: 0.6rem;
@@ -253,7 +270,7 @@
                 <a href="index.html#projects"   class="nav-link">Projetos</a>
                 <a href="index.html#education"  class="nav-link">Formação</a>
                 <a href="index.html#contact"    class="nav-link">Contato</a>
-                <a href="repo.html"             class="nav-link" style="color:var(--primary-color);font-weight:700;">
+                <a href="github.html"           class="nav-link" style="color:var(--primary-color);font-weight:700;">
                     <i class="fab fa-github" style="margin-right:4px;"></i>Repos
                 </a>
             </div>
@@ -490,8 +507,8 @@
                     <h3>${repo.name}</h3>
                     <p>${desc}</p>
                     <div class="project-tech">${techTags}</div>
-                    <a href="${repo.html_url}" target="_blank" rel="noopener" class="education-link">
-                        Ver no GitHub <i class="fas fa-external-link-alt"></i>
+                    <a href="${repo.html_url}" target="_blank" rel="noopener" class="repo-github-btn">
+                        <i class="fab fa-github"></i> Ver no GitHub
                     </a>
                 </div>`;
             return card;
