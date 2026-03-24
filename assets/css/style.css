@@ -1257,7 +1257,7 @@ body {
     margin-bottom: 3rem;
 }
 
-.repo-card {
+a.repo-card {
     background: var(--bg-card);
     border-radius: 16px;
     padding: 1.5rem;
@@ -1273,7 +1273,7 @@ body {
     overflow: hidden;
 }
 
-.repo-card::before {
+a.repo-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1286,13 +1286,13 @@ body {
     transform-origin: left;
 }
 
-.repo-card:hover {
+a.repo-card:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-xl);
     border-color: var(--primary-light);
 }
 
-.repo-card:hover::before {
+a.repo-card:hover::before {
     transform: scaleX(1);
 }
 
