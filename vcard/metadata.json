@@ -35,11 +35,9 @@
       "linktree": "https://linktr.ee/marcelofmatos"
     },
     "address": {
-      "region": "Atendimento Remoto",
       "availability": "Disponível Globalmente",
-      "service_type": "100% Remoto",
       "coverage": "Mundial",
-      "formatted": "Atendimento Remoto - Disponível Globalmente"
+      "formatted": "Disponível Globalmente"
     }
   },
   "professional": {
@@ -52,7 +50,6 @@
       "Softwares Livres",
       "Containerização",
       "Metodologias Ágeis",
-      "Atendimento Remoto",
       "Trabalho Distribuído"
     ],
     "technologies": {
@@ -66,7 +63,7 @@
       "position": "Suporte de Infraestrutura",
       "company": "Complemento - Liberdade e Tecnologia",
       "start_date": "2019-01",
-      "description": "Atuando no suporte de infraestrutura em solução SaaS com atendimento 100% remoto"
+      "description": "Atuando no suporte de infraestrutura em solução SaaS"
     },
     "previous_role": {
       "position": "Técnico em Informática",

@@ -85,16 +85,12 @@ O vCard é atualizado automaticamente conforme mudanças no site principal.
 - **Twitter**: https://twitter.com/marcelofmatos
 - **Linktree**: https://linktr.ee/marcelofmatos
 
-## 📍 Localização
-
-**Atendimento**: 100% Remoto - Disponível Globalmente
-
 ## 🏢 Informações Profissionais
 
 - **Empresa**: Complemento - Liberdade e Tecnologia
 - **Cargo**: Desenvolvedor Full Stack / DevOps
 - **Experiência**: 15+ anos
-- **Especialidades**: Softwares livres, automação em nuvem, containerização, infraestrutura de TI, atendimento remoto
+- **Especialidades**: Softwares livres, automação em nuvem, containerização, infraestrutura de TI
 
 ## 📄 Licença
 
