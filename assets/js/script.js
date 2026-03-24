@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initProgressBars();
     initCodeRain();
     initWhatsAppLinks(); // Adicionar inicialização dos links do WhatsApp
+    initGitHubRepos();
     
     // Initialize AOS (Animate On Scroll)
     if (typeof AOS !== 'undefined') {
@@ -743,6 +744,122 @@ function initWhatsAppLinks() {
         console.log(`✅ WhatsApp links inicializados para ${whatsappLinks.length} elementos`);
         console.log(`🌐 Site detectado: ${siteName}`);
     }, 100);
+}
+
+// GitHub Repos
+async function initGitHubRepos() {
+    const grid = document.getElementById('reposGrid');
+    if (!grid) return;
+
+    // Exibe skeletons enquanto carrega
+    grid.innerHTML = Array(12).fill(0).map(() => `
+        <div class="repo-skeleton">
+            <div class="skeleton-line short"></div>
+            <div class="skeleton-line long"></div>
+            <div class="skeleton-line medium"></div>
+        </div>
+    `).join('');
+
+    try {
+        const [reposRes, ignoreRes] = await Promise.all([
+            fetch('https://api.github.com/users/marcelofmatos/repos?sort=updated&per_page=20&type=public'),
+            fetch('/github_ignore.txt').catch(() => null)
+        ]);
+        if (!reposRes.ok) throw new Error('GitHub API error: ' + reposRes.status);
+
+        const ignoreList = ignoreRes && ignoreRes.ok
+            ? (await ignoreRes.text()).split('\n').map(l => l.trim()).filter(Boolean)
+            : [];
+
+        const allRepos = await reposRes.json();
+        const repos = allRepos.filter(r => !ignoreList.includes(r.name)).slice(0, 12);
+
+        grid.innerHTML = repos.map((repo, i) => {
+            const langColor = getLanguageColor(repo.language);
+            const updatedDate = timeAgo(new Date(repo.updated_at));
+            const description = repo.description
+                ? escapeHtml(repo.description)
+                : '<em style="opacity:.55">Sem descrição</em>';
+
+            return `
+                <a href="${escapeHtml(repo.html_url)}" target="_blank" rel="noopener"
+                   class="repo-card" data-aos="zoom-in" data-aos-delay="${i * 60}">
+                    <div class="repo-name">
+                        <i class="fas fa-book-open"></i>
+                        ${escapeHtml(repo.name)}
+                    </div>
+                    <p class="repo-description">${description}</p>
+                    <div class="repo-meta">
+                        ${repo.language ? `
+                        <span class="repo-lang">
+                            <span class="lang-dot" style="background:${langColor}"></span>
+                            ${escapeHtml(repo.language)}
+                        </span>` : ''}
+                        ${repo.stargazers_count > 0 ? `
+                        <span class="repo-stars">
+                            <i class="fas fa-star"></i> ${repo.stargazers_count}
+                        </span>` : ''}
+                        ${repo.forks_count > 0 ? `
+                        <span class="repo-forks">
+                            <i class="fas fa-code-branch"></i> ${repo.forks_count}
+                        </span>` : ''}
+                        <span class="repo-updated">
+                            <i class="fas fa-clock"></i> ${updatedDate}
+                        </span>
+                    </div>
+                </a>
+            `;
+        }).join('');
+
+        // Reinicializa AOS para os novos elementos
+        if (typeof AOS !== 'undefined') AOS.refresh();
+
+    } catch (err) {
+        console.warn('Erro ao carregar repos GitHub:', err);
+        grid.innerHTML = `
+            <div class="repo-error">
+                <i class="fab fa-github"></i>
+                Não foi possível carregar os repositórios. Tente novamente mais tarde.
+            </div>
+        `;
+    }
+}
+
+function timeAgo(date) {
+    const seconds = Math.floor((new Date() - date) / 1000);
+    if (seconds < 60)          return 'agora mesmo';
+    const minutes = Math.floor(seconds / 60);
+    if (minutes < 60)          return `há ${minutes} minuto${minutes > 1 ? 's' : ''}`;
+    const hours = Math.floor(minutes / 60);
+    if (hours < 24)            return `há ${hours} hora${hours > 1 ? 's' : ''}`;
+    const days = Math.floor(hours / 24);
+    if (days === 1)            return 'ontem';
+    if (days < 7)              return `há ${days} dias`;
+    const weeks = Math.floor(days / 7);
+    if (weeks < 5)             return `há ${weeks} semana${weeks > 1 ? 's' : ''}`;
+    const months = Math.floor(days / 30);
+    if (months < 12)           return `há ${months} ${months > 1 ? 'meses' : 'mês'}`;
+    const years = Math.floor(days / 365);
+    return `há ${years} ano${years > 1 ? 's' : ''}`;
+}
+
+function getLanguageColor(lang) {
+    const colors = {
+        JavaScript: '#f1e05a', TypeScript: '#2b7489', PHP: '#4F5D95',
+        Python: '#3572A5', Java: '#b07219', HTML: '#e34c26', CSS: '#563d7c',
+        Shell: '#89e051', Perl: '#0298c3', Dockerfile: '#384d54',
+        'C#': '#178600', Ruby: '#701516', Go: '#00ADD8', Rust: '#dea584',
+        Vue: '#41b883', Svelte: '#ff3e00', Kotlin: '#A97BFF', Swift: '#F05138',
+    };
+    return colors[lang] || '#8b8b8b';
+}
+
+function escapeHtml(str) {
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
 }
 
 console.log('🚀 Site do Marcelo Matos carregado com sucesso!');
