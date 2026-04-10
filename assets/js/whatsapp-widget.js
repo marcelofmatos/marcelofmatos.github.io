@@ -89,7 +89,7 @@
       + '</div>'
       + '<div class="ww-bubble-body">'
       +   '<div class="ww-message">'
-      +     'Vamos transformar sua ideia em realidade? 🚀 Me conta o que você precisa e a gente resolve juntos.'
+      +     'Vamos transformar sua ideia em realidade? 🚀 Diga-me o que você precisa e a gente resolve juntos.'
       +   '</div>'
       + '</div>'
       + '<a href="' + WA_URL + '" class="ww-cta" target="_blank" rel="noopener noreferrer">'
