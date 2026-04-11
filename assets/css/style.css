@@ -2177,9 +2177,10 @@ html {
 .objective-list {
     list-style: none;
     padding: 0;
-    margin: 1.5rem 0 0;
+    margin: 1.5rem auto 0;
     text-align: left;
-    display: inline-block;
+    display: block;
+    max-width: fit-content;
 }
 
 .objective-list li {
@@ -2199,6 +2200,10 @@ html {
 /* ===========================
    Services Section
    =========================== */
+
+.services-section {
+    background: var(--bg-secondary);
+}
 
 .services-subtitle {
     text-align: center;
