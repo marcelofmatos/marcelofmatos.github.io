@@ -78,6 +78,7 @@
     bubble.hidden = true;
     bubble.innerHTML = ''
       + '<div class="ww-bubble-header">'
+      +   '<div class="ww-bubble-title">👤 Fale com um humano</div>'
       +   '<div class="ww-bubble-identity">'
       +     '<div class="ww-avatar">M</div>'
       +     '<div>'

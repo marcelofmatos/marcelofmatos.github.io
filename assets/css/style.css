@@ -2013,8 +2013,8 @@ html {
    ============================================= */
 .ww-fab {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  right: calc(24px + env(safe-area-inset-right, 0px));
   z-index: 9999;
   display: flex;
   flex-direction: column;
@@ -2068,14 +2068,30 @@ html {
   background: #25D366;
   padding: 0.75rem 1rem;
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ww-bubble-title {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  opacity: 0.9;
+}
+
+.ww-bubble-header > .ww-bubble-identity {
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .ww-bubble-identity {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 100%;
 }
 
 .ww-avatar {
