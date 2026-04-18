@@ -2072,19 +2072,18 @@ html {
   gap: 0.5rem;
 }
 
+.ww-bubble-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .ww-bubble-title {
   color: white;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.03em;
   opacity: 0.9;
-}
-
-.ww-bubble-header > .ww-bubble-identity {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
 }
 
 .ww-bubble-identity {
