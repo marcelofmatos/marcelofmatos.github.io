@@ -34,7 +34,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
-    /* Global text overflow protection */
+    overflow-x: hidden;
     overflow-wrap: anywhere;
     word-wrap: break-word;
 }
