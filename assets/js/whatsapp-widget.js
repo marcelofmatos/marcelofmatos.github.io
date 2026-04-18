@@ -2,9 +2,7 @@
   'use strict';
 
   var PHONE       = '5511977974431';
-  var TEXT        = 'Olá Marcelo! Vi seu site e gostaria de conversar sobre um projeto.';
-  var WA_URL      = 'https://api.whatsapp.com/send?phone=' + PHONE
-                  + '&text=' + encodeURIComponent(TEXT);
+  var PLACEHOLDER = 'Olá Marcelo! Vi seu site e gostaria de conversar sobre um projeto.';
   var STORAGE_KEY = 'ww_dismissed';
   var AUTO_DELAY  = 8000;
 
@@ -91,13 +89,14 @@
       +   '</div>'
       + '</div>'
       + '<div class="ww-bubble-body">'
-      +   '<div class="ww-message">'
-      +     'Vamos transformar sua ideia em realidade? 🚀 Diga-me o que você precisa e a gente resolve juntos.'
-      +   '</div>'
+      +   '<div class="ww-message">Olá! Como posso te ajudar? 👋</div>'
       + '</div>'
-      + '<a href="' + WA_URL + '" class="ww-cta" target="_blank" rel="noopener noreferrer">'
-      +   '💬 Falar sobre meu projeto &rarr;'
-      + '</a>';
+      + '<div class="ww-input-row">'
+      +   '<textarea class="ww-textarea" rows="2" placeholder="' + PLACEHOLDER + '"></textarea>'
+      +   '<button class="ww-send" aria-label="Enviar mensagem">'
+      +     '<svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>'
+      +   '</button>'
+      + '</div>';
 
     // FAB button
     var btn = document.createElement('button');
@@ -114,6 +113,23 @@
     // Events
     btn.addEventListener('click', handleFabClick);
     bubble.querySelector('.ww-close').addEventListener('click', handleClose);
+
+    var sendBtn  = bubble.querySelector('.ww-send');
+    var textarea = bubble.querySelector('.ww-textarea');
+
+    function sendMessage() {
+      var text = textarea.value.trim() || PLACEHOLDER;
+      var url  = 'https://api.whatsapp.com/send?phone=' + PHONE + '&text=' + encodeURIComponent(text);
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    textarea.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendMessage();
+      }
+    });
   }
 
   function init() {
