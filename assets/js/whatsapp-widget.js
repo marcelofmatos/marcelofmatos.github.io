@@ -5,6 +5,7 @@
   var PLACEHOLDER = 'Olá Marcelo! Vi seu site e gostaria de conversar sobre um projeto.';
   var STORAGE_KEY = 'ww_dismissed';
   var AUTO_DELAY  = 8000;
+  var HASH_AVATAR = 'd8d01eb95cc608ebccf88b68a7f03fee';
 
   var fab, bubble, tooltip, autoOpenTimer;
 
@@ -81,7 +82,7 @@
       +     '<button class="ww-close" aria-label="Fechar">&times;</button>'
       +   '</div>'
       +   '<div class="ww-bubble-identity">'
-      +     '<div class="ww-avatar">M</div>'
+      +     '<img class="ww-avatar" src="https://www.gravatar.com/avatar/' + HASH_AVATAR + '?s=72&d=mp" alt="Marcelo Matos" width="36" height="36">'
       +     '<div>'
       +       '<div class="ww-name">Marcelo Matos</div>'
       +       '<div class="ww-status">&#9679; Online agora</div>'

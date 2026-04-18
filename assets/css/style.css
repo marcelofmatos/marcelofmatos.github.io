@@ -2096,15 +2096,10 @@ html {
 .ww-avatar {
   width: 36px;
   height: 36px;
-  background: white;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  color: #25D366;
-  font-size: 1rem;
+  object-fit: cover;
   flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
 .ww-name {
@@ -2204,6 +2199,22 @@ html {
   to   { opacity: 1; }
 }
 
+@media (max-width: 480px) {
+  .ww-fab {
+    bottom: calc(16px + env(safe-area-inset-bottom, 20px));
+    right: 16px;
+  }
+
+  .ww-bubble {
+    position: fixed;
+    bottom: calc(80px + env(safe-area-inset-bottom, 20px));
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    transform-origin: bottom center;
+  }
+}
 
 /* Objective list */
 .objective-list {
