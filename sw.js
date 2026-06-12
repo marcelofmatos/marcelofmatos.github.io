@@ -1,7 +1,7 @@
 // Service Worker para o site do Marcelo Matos
 // Versão 2.0 - Cache otimizado e performance
 
-const CACHE_NAME = 'marcelo-matos-v3.0';
+const CACHE_NAME = 'marcelo-matos-v3.1';
 const urlsToCache = [
     '/',
     '/index.html',
